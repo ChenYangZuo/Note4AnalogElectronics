@@ -255,8 +255,84 @@ $R_e$足够小时放大性能类似于共射放大器
 
 通频带很宽,是共射放大器的$i+\beta$倍
 
+
+
 # 2.6 场效应管放大电路
+
+## 2.6.1 基本共源放大电路
+
+### 一、构成
+
+![共源放大电路](pic/共源放大电路.png)
+
+### 二、分析
+
+#### 1.直流分析
+
+$$\Large I_{DQ}=I_{DO}\cdot  ({U_{GS} \over U_{GS(th)}}-1)^2$$
+
+$$\Large U_{GQ}=U_A={R_{g1}\over {R_{g1}+R_{g2}}} \cdot V_{DD}$$
+
+$$\Large U_{SQ}=I_{DQ}R_s$$
+
+$$\Large U_{GSQ}=U_{GQ}-U_{SQ}={R_{g1}\over {R_{g1}+R_{g2}}} \cdot V_{DD}-I_{DQ}R_s$$
+
+#### 2.**简化等效模型**
+
+![NMOS交流等效](pic/NMOS交流等效.png)
+
+$$\Large I_d=g_mU_{gs}+{1\over r_{ds}}\cdot U_{ds}$$
+
+$$\Large r_{ds}=\infty$$
+
+$$\Large g_m \approx {2 \over U_{GS(th)}}\sqrt{I_{DO}I_{DQ}}$$
+
+#### 3.交流分析
+
+![共源放大交流等效](pic/共源放大交流等效.png)
+
+$$\Large A_{u}={u_o \over u_i}={{-I_dR_d}\over U_{gs}}={{-g_mU_{gs}R_d}\over U_{gs}}=-g_mR_d$$
+
+$$\Large R_i=\infty$$
+
+$$\Large R_o=R_d$$
+
+## 2.6.2 基本共漏放大电路
+
+### 一、构成
+
+![共漏放大器](pic/共漏放大器.png)
+
+### 二、分析
+
+#### 1.直流分析
+
+$$\Large V_{GG}=U_{GSQ}+I_{DQ}R_s$$
+
+$$\Large I_{DQ}=I_{DO}\cdot  ({U_{GS} \over U_{GS(th)}}-1)^2$$
+
+$$\Large U_{DSQ}=V_{DD}-I_{DQ}R_s$$
+
+#### 2.交流分析
+
+![共漏放大器交流等效](pic/共漏放大器交流等效.png)
+
+$$\Large A_{u}={u_o \over u_i}={{g_mU_{gs}R_s}\over U_{gs}+g_mU_{gs}R_s}={{g_mR_s} \over 1+g_mR_s}$$
+
+$$\Large R_i=\infty$$
+
+$$\Large R_o=R_s \parallel {1\over g_m}$$
+
+## 2.6.3 基本共栅放大电路
 
 
 
 # 2.7 派生电路
+
+## 2.7.1 共射-共基放大电路
+
+![image-20220226213359232](pic/image-20220226213359232.png)
+
+## 2.7.2 共集-共基放大电路
+
+![image-20220226213413010](pic/image-20220226213413010.png)
