@@ -179,7 +179,7 @@ uT：26mV
 
 ### 二、结构
 
-![npn](pic\npn .png)
+![npn](pic/npn.png)
 
 发射极载流子浓度最高
 
@@ -197,7 +197,7 @@ uT：26mV
 
 ### 二、基本共射放大电路
 
-![共射放大](pic\共射放大.png)
+![共射放大](pic/共射放大.png)
 
 $R_b$限流电阻
 
@@ -205,7 +205,7 @@ $V_{CC}>V_{BB}$正向偏置
 
 ### 三、内部载流子的运动
 
-![载流子](pic\三极管载流子.png)
+![载流子](pic/三极管载流子.png)
 
 1.发射结正偏，发射极自由电子向基区扩散，基区空穴向发射极扩散（很少）
 
@@ -233,7 +233,7 @@ $$\overline\beta={\overline\alpha \over 1-\overline\alpha}$$
 
 ### 一、输入特性曲线
 
-![共射输入](pic\共射输入.png)
+![共射输入](pic/共射输入.png)
 
 体现了$V_{BE}$对$I_B$的控制
 
@@ -241,7 +241,7 @@ $$\overline\beta={\overline\alpha \over 1-\overline\alpha}$$
 
 ### 二、输出特性曲线
 
-![共射输出](pic\共射输出.png)
+![共射输出](pic/共射输出.png)
 
 饱和区：发射结、集电结正偏，三极管类似导体，$I_C$几乎不受$I_B$控制
 
@@ -283,11 +283,11 @@ $$\overline\beta={\overline\alpha \over 1-\overline\alpha}$$
 
 #### 1.结构
 
-![NMOS增强型](pic\NMOS增.png)
+![NMOS增强型](pic/NMOS增.png)
 
 #### 2.工作原理
 
-![NMOS曲线](pic\NMOS曲线.png)
+![NMOS曲线](pic/NMOS曲线.png)
 
 （1）截止区与沟道形成
 
@@ -307,7 +307,7 @@ $V_{GS}$不变，$V_{DS}$持续增大时，近漏极端沟道深度减小，直�
 
 #### 1.结构
 
-![NMOS耗](pic\NMOS耗.png)
+![NMOS耗](pic/NMOS耗.png)
 
 #### 2.工作原理
 
@@ -321,7 +321,7 @@ $V_{GS}$不变，$V_{DS}$持续增大时，近漏极端沟道深度减小，直�
 
 ### 一、特性曲线
 
-![MOS](pic\MOS.png)
+![MOS](pic/MOS.png)
 
 1.NJFET：全正
 
