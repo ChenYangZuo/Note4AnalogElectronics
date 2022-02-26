@@ -113,7 +113,7 @@ $R_o$
 1. 化为交流通路
 2. 化简的等效h模型
 
-### 三、共射放大电路
+### 三、分析基本共射放大电路
 
 ![共射放大](pic/共射放大.png)
 
@@ -191,17 +191,69 @@ $$\Large R_o=R_c$$
 
 #### 1.直流分析
 
+$$\Large V_{BB}=I_{EQ}R_E+U_{BEQ}+I_{BQ}R_b$$
+
+$$\Large I_{BQ}={{V_{BB}-U_{BEQ}} \over {R_b+(1+\beta)R_e}}$$
+
+$$\Large U_{CEQ}=V_{CC}-I_{EQ}R_e$$
+
 #### 2.交流分析
+
+![射极跟随器交流等效](pic/射极跟随器交流等效.png)
+
+$$\Large r_{be}=r_{bb\prime}+(1+\beta){U_T \over I_{EQ}} \approx r_{bb\prime}+(1+\beta){U_T \over I_{CQ}}$$
+
+$$\Large A_u={u_o \over u_i}={{i_e \cdot R_e} \over {i_e \cdot R_e+i_b(R_b+r_{be})}} \approx 1 \lt 1$$
+
+$$\Large R_i={U_i \over I_i}={{I_b(R_b+r_{be})+I_eR_e} \over I_b}=R_b+r_{be}+(1+\beta)R_e$$
+
+$$\Large R_o={U_o \over I_o}={U_o \over {(1+\beta){U_o \over R_b+r_{be}}+{U_o \over R_e}}}=R_e \parallel {{R_b+r_{be}\over 1+\beta}}$$
+
+#### 3.结论
+
+电压增益约为1
+
+电流增益大
+
+输入电阻大，输出电阻小
 
 ## 2.5.2 基本共基放大电路
 
 ### 一、构成
 
+![共基放大器](pic/共基放大器.png)
+
 ### 二、分析
 
 #### 1.直流分析
 
+$$\Large U_{EQ}=-U_{BE}$$
+
+$$\Large U_{CQ}=V_{CC}-I_{CQ}R_c$$
+
+$$\Large I_{EQ}={{V_{BB}-U_{BEQ}}\over {R_e}}$$
+
+$$\Large I_{BQ}={I_{EQ}\over {1+\beta}}$$
+
+$$\Large U_{CEQ}=U_{CQ}-U_{EQ}=V_{CC}-I_{CQ}R_c+U_{BEQ}$$
+
 #### 2.交流分析
+
+![共基放大交流等效](pic/共基放大交流等效.png)
+
+$$\Large r_{be}=r_{bb\prime}+(1+\beta){U_T \over I_{EQ}} \approx r_{bb\prime}+(1+\beta){U_T \over I_{CQ}}$$
+
+$$\Large A_{u}={u_o \over u_i}={{\beta i_b(R_c \parallel R_L)} \over {i_br_{be}+i_eR_e}}={{\beta (R_c \parallel R_L)} \over {r_{be}+(i+\beta)R_e}}$$
+
+$$\Large R_i={U_i \over I_i}={{i_eR_e+i_br_{be}}\over i_e}=R_e+{r_be \over {1+\beta}}$$
+
+$$\Large R_o=R_c$$
+
+#### 3.结论
+
+$R_e$足够小时放大性能类似于共射放大器
+
+通频带很宽,是共射放大器的$i+\beta$倍
 
 # 2.6 场效应管放大电路
 
