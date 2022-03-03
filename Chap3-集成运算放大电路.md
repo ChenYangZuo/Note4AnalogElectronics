@@ -142,11 +142,45 @@ Q点稳定
 
 ### 二、长尾式差分放大电路
 
+#### 1.结构
+
 ![image-20220228112928531](pic/image-20220228112928531.png)
 
+#### 2.分析
+
+##### 静态
+
+$$\Large I_{Re}=I_{EQ1}+I_{EQ2}=2I_{EQ}$$
+
+$$\Large V_{EE}=I_{BQ}R_b+U_{BEQ}+2I_{EQ}R_e$$
+
+$$\Large I_{EQ}\approx {V_{EE}-U_{BEQ}\over2R_e}$$
+
+##### 共模信号
+
+$$\Large \Delta i_{B1}=\Delta i_{B2}$$
+
+$$\Large \Delta i_{C1}=\Delta i_{C2}$$
+
+$$\Large \Delta u_{C1}=\Delta u_{C2}$$
+
+$$\Large u_o=0$$
+
+##### 差模信号
+
+![image-20220303221200961](pic/image-20220303221200961.png)
+
+$$\Large \Delta u_{Id}=2\Delta i_{B1}(R_b+r_{be})$$
+
+$$\Large \Delta u_{Od}=-2\Delta i_{C1}(R_c \parallel r_{be})$$
+
+$$\Large A_d=-{\beta(R_c \parallel {R_L \over 2}) \over R_b+r_{be}}$$
+
+$$\Large R_i=2(R_b+r_{be})$$
+
+$$\Large R_o=2R_c$$
+
 ### 三、四种接法
-
-
 
 ## 3.3.3 电流源电路
 
@@ -258,15 +292,15 @@ $$\Large I_{CQ1}=I_{C2}={\beta \over \beta+2}\cdot I_R={\beta \over \beta+2}\cdo
 
 ##### 差模信号
 
-$$i_{D1}=-i_{D2}=I_{D3}=I_{D4}$$
+$$\Large i_{D1}=-i_{D2}=I_{D3}=I_{D4}$$
 
-$$i_O=i_{D4}-i_{D2}=2i_{D1}$$
+$$\Large i_O=i_{D4}-i_{D2}=2i_{D1}$$
 
 ##### 共模信号
 
-$$i_{D1}=i_{D2}=I_{D3}=I_{D4}$$
+$$\Large i_{D1}=i_{D2}=I_{D3}=I_{D4}$$
 
-$$i_O=i_{D4}-i_{D2}=0$$
+$$\Large i_O=i_{D4}-i_{D2}=0$$
 
 
 
@@ -282,5 +316,16 @@ $$i_O=i_{D4}-i_{D2}=0$$
 
 ### 二、基本电路
 
+![image-20220303213915155](pic/image-20220303213915155.png)
+
+$u_i>0$时，T1管导通
+
+$u_i<0$时，T2管导通
+
+为克服死区电压产生交越失真
+
 ### 三、消除交越失真的互补输出级电路
 
+![image-20220303214825714](pic/image-20220303214825714.png)
+
+$$\Large U_{B1B3}=U_{CE5}={R_3+R_4\over R_4}\cdot U_{BE5}=(1+{R_3\over R_4})U_{BE5}$$
