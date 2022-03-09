@@ -157,3 +157,84 @@ $$\Large i_F=-{R_2\over R_1+R_2}\cdot i_o$$
 
 # 4.3 方块图及一般表达式
 
+## 4.3.1 负反馈放大电路的方块图表示法
+
+![image-20220309114811748](pic/image-20220309114811748.png)
+
+### 闭环放大倍数
+
+$$\Large A_f={X_o \over X_i}={AX_i' \over X_i'+X_f}={AX_i' \over X_i'+FAX_i'}={A \over 1+AF}$$
+
+### 环路放大倍数
+
+$$\Large AF={X_f \over X_i'}$$
+
+### 反馈深度
+
+$$\Large \left\vert 1+AF \right\vert$$
+
+## 4.3.2 四种组态电路的方块图
+
+![image-20220309154947981](pic/image-20220309154947981.png)
+
+| 反馈组态 |               $A$                |               $F$               |              $A_f$               |          功能          |
+| :------: | :------------------------------: | :-----------------------------: | :------------------------------: | :--------------------: |
+| 电压串联 | $\Large A_{uu}={U_o \over U_i'}$ | $\Large F_{uu}={U_f \over U_o}$ | $\Large A_{uuf}={U_o \over U_i}$ | 电压控制电压，电压放大 |
+| 电流串联 | $\Large A_{iu}={I_o \over U_i'}$ | $\Large F_{ui}={U_f \over I_o}$ | $\Large A_{iuf}={I_o \over U_i}$ |      电压控制电流      |
+| 电压并联 | $\Large A_{ui}={U_o \over I_i'}$ | $\Large F_{iu}={I_f \over U_o}$ | $\Large A_{uif}={U_o \over I_i}$ |      电流控制电压      |
+| 电流并联 | $\Large A_{ii}={I_o \over I_i'}$ | $\Large F_{ii}={I_f \over I_o}$ | $\Large A_{iif}={I_o \over I_i}$ | 电流控制电流，电流放大 |
+
+
+
+# 4.4 深度负反馈放大电路分析
+
+## 4.4.1 深度负反馈的实质
+
+在近似分析中忽略净输入量
+
+## 4.4.2 反馈网络的分析
+
+![image-20220309174248914](pic/image-20220309174248914.png)
+
+### 一、电压串联
+
+$\Large F_{uu}={U_f \over U_o}={R_1\over R_1+R_2}$
+
+$\Large A_{uuf}\approx {U_o \over U_f}={R_1+R_2 \over R_1}$
+
+$\Large U_o={R_1+R_2 \over R_1}\cdot U_i$
+
+### 二、电流串联
+
+$\Large F_{ui}={U_f \over I_o}={I_oR \over I_o}=R$
+
+$\Large A_{iuf} \approx {I_o \over U_f}={1 \over R}$
+
+$\Large A_{uuf}={U_o \over U_i}={I_oR_L \over I_oR}={R_L \over R}$
+
+$\Large U_o={R_L \over R}\cdot U_i$
+
+### 三、电压并联
+
+$\Large F_{iu}={I_f \over U_o}={{-U_o \over R}\over U_o}=-{1\over R}$
+
+$\Large A_{uif} \approx {U_o \over I_f}={-i_fR \over i_f}=-R$
+
+$\Large A_{usf}={U_o \over U_s}={U_o \over i_fR_s}={-i_fR \over i_fR_s}=-{R \over R_s}$
+
+$\Large U_o=-{R \over R_s}\cdot U_i$
+
+### 四、电流并联
+
+$\Large F_{ii}={I_f \over I_o}={-{R_2 \over R_1+R_2}I_o \over I_o}=-{R_2 \over R_1+R_2}$
+
+$\Large A_{iif} \approx {I_o \over I_f}=-{R_1+R_2 \over R_2}$
+
+$\Large A_{usf}={U_o \over U_s}={I_oR_L \over I_fR_s}=-{R_1+R_2 \over R_2}\cdot {R_L\over R_s}$
+
+$\Large U_o=-{R_1+R_2 \over R_2}\cdot {R_L\over R_s}\cdot U_i$
+
+
+
+# 4.5 负反馈对放大电路性能的影响
+
