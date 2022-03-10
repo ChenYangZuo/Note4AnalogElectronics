@@ -238,3 +238,94 @@ $\Large U_o=-{R_1+R_2 \over R_2}\cdot {R_L\over R_s}\cdot U_i$
 
 # 4.5 负反馈对放大电路性能的影响
 
+## 4.5.1 稳定放大倍数
+
+$\Large A_f={A \over 1+AF}$
+
+$\Large dA_f = {1\cdot(1+AF)-AF \over (1+AF)^2}dA={1 \over (1+AF)^2}dA$
+
+$\Large {dA_f \over A_f} = {{1 \over (1+AF)^2}dA \over A_f}={1 \over 1+AF}{dA \over A}$
+
+稳定性提高(1+AF)倍
+
+## 4.5.2 改变输入输出电阻
+
+### 一、对输入电阻
+
+#### 1.串联
+
+![image-20220310154110362](pic/image-20220310154110362.png)
+
+$\Large R_{if}={U_i \over I_i}={U_i'+AFU_i' \over I_i}=(1+AF)R_i$
+
+#### 2.并联
+
+![image-20220310154119711](pic/image-20220310154119711.png)
+
+$\Large R_{if}={U_i \over I_i}={U_i\over (1+AF)I_i'}={R_i \over (1+AF)}$
+
+### 二、对输出电阻
+
+#### 1.电压
+
+![image-20220310154045134](pic/image-20220310154045134.png)
+
+$\Large R_{of}={U_o \over I_o}={U_o \over {U_o-(-AFU_o)\over R_o}}={R_o \over 1+AF}$
+
+#### 2.电流
+
+$\Large R_{of}=(1+AF)R_o$
+
+## 4.5.3 展宽频带
+
+展宽(1+AF)倍
+
+## 4.5.4 减小非线性失真
+
+## 4.5.5 放大电路引入负反馈的一般原则
+
+
+
+# 4.6 负反馈放大电路的稳定性
+
+## 4.6.1 负反馈放大电路自激振荡产生的原因和条件
+
+### 一、原因
+
+中频段：$\Large \left\vert X_i'\right\vert = \left\vert X_i\right\vert -\left\vert X_f\right\vert $
+
+在低频段或高频段时，某一频率信号使得A与F的相移产生超前或滞后180°，使得$\Large \left\vert X_i'\right\vert = \left\vert X_i\right\vert +\left\vert X_f\right\vert $
+
+### 二、平衡条件
+
+$\Large \left\vert AF \right\vert \ge 1$
+
+$\Large \varphi_A+\varphi_F=(2n+1)\pi$
+
+## 4.6.2 负反馈放大电路稳定性的定性分析
+
+单级放大电路：最大相移-90°，不可能自激振荡
+
+两级放大电路：最大相移-180°，在-180°时A=0，不可能自激振荡
+
+三级放大电路：最大相移-270°，可能产生自激振荡
+
+反馈越深，满足赋值条件的可能性越大，产生自激振荡的可能性越大
+
+## 4.6.3 负反馈放大电路稳定性的判断
+
+若不存在使$\varphi_A+\varphi_F=180°$的$f_0$，则电路稳定
+
+若存在$f_0$，且小于使$20lg\left\vert AF \right\vert=0$的$f_c$，则电路不稳定，必然产生自激振荡；若大于$f_c$，则电路稳定
+
+## 4.6.4 负反馈放大电路自激振荡的消除
+
+### 一、滞后补偿
+
+![image-20220310215835061](pic/image-20220310215835061.png)
+
+![image-20220310215853792](pic/image-20220310215853792.png)
+
+### 二、超前补偿
+
+![image-20220310215920949](pic/image-20220310215920949.png)
